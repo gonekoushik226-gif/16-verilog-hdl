@@ -817,5 +817,145 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "07-finite-state-machines/118-moore-sequence-detector": {
+  "cells": 29,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/119-mealy-sequence-detector": {
+  "cells": 14,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/120-fsm-state-encoding-styles": {
+  "cells": 97,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/121-divisible-by-three-fsm": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/122-serial-adder-fsm": {
+  "cells": 9,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/123-traffic-light-controller": {
+  "cells": 53,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/124-traffic-light-with-pedestrian": {
+  "cells": 149,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/125-vending-machine": {
+  "cells": 140,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/126-elevator-controller": {
+  "cells": 210,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/127-combination-lock": {
+  "cells": 105,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/128-washing-machine-controller": {
+  "cells": 168,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/129-parking-lot-counter": {
+  "cells": 121,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/130-four-phase-handshake": {
+  "cells": 35,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/131-gcd-fsmd": {
+  "cells": 162,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/132-safe-fsm-recovery": {
+  "cells": 27,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/133-hierarchical-fsm-microwave": {
+  "cells": 115,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/134-stepper-motor-controller": {
+  "cells": 34,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "08-memory/135-rom-case": {
+  "cells": 25,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "08-memory/136-rom-readmemh": {
+  "cells": 26,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "08-memory/137-synchronous-rom": {
+  "cells": 33,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
