@@ -859,5 +859,19 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "07-finite-state-machines/124-traffic-light-with-pedestrian": {
+  "cells": 149,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/125-vending-machine": {
+  "cells": 140,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
