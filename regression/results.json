@@ -306,5 +306,12 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/045-address-decoder": {
+  "cells": 74,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
