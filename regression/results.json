@@ -474,5 +474,54 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "04-arithmetic-circuits/069-carry-lookahead-adder-4bit": {
+  "cells": 40,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/070-carry-lookahead-adder-16bit": {
+  "cells": 175,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/071-carry-select-adder": {
+  "cells": 89,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/072-carry-skip-adder": {
+  "cells": 72,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/073-carry-save-adder": {
+  "cells": 126,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/074-bcd-adder": {
+  "cells": 136,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/075-incrementer-decrementer": {
+  "cells": 23,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
