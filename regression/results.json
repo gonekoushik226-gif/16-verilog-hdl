@@ -264,5 +264,19 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/039-decoder-3to8-cascaded": {
+  "cells": 18,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/040-decoder-parameterized": {
+  "cells": 21,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
