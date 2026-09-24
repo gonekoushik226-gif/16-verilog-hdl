@@ -719,5 +719,47 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "06-registers-and-counters/104-binary-up-counter": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/105-up-down-counter": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/106-loadable-counter": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/107-modulo-n-counter": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/108-bcd-decade-counter": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/109-cascaded-bcd-counter": {
+  "cells": 51,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
