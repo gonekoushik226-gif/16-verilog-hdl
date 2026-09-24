@@ -266,7 +266,8 @@ def sim_block(res):
         out.append("")
     syn = res["synth"]
     if syn["status"] == "PASS":
-        cells = f", {syn['cells']} cells" if syn.get("cells") is not None else ""
+        n = syn.get("cells")
+        cells = f", {n} cell{'s' if n != 1 else ''}" if n is not None else ""
         note = f" ({syn['note']})" if syn.get("note") else ""
         out.append(f"Synthesis (Yosys {YOSYS_VER}, generic `synth`): "
                    f"**PASS**{cells}{note}")
@@ -365,7 +366,7 @@ def update_status(results):
     for key in sorted(results, key=lambda k: k.split("/")[1]):
         r = results[key]
         num = key.split("/")[1][:3]
-        cells = f" ({r['cells']} cells)" if r.get("cells") else ""
+        cells = f" ({r['cells']} cells)" if r.get("cells") is not None else ""
         lines.append(f"| {num} | [{key.split('/')[1][4:]}]({key}/) | "
                      f"{r['testbenches']} | {r['sim']} | {r['synth']}{cells} | "
                      f"{r['lint']} |")

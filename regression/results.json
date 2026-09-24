@@ -1,1 +1,58 @@
-{}
+{
+ "00-foundations/001-first-module": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/002-wires-and-continuous-assignment": {
+  "cells": 7,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/003-reg-and-procedural-blocks": {
+  "cells": 26,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/004-number-literals-and-logic-values": {
+  "cells": 0,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/005-vectors-and-bit-selection": {
+  "cells": 24,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/006-bitwise-logical-reduction-operators": {
+  "cells": 33,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/007-arithmetic-relational-shift-operators": {
+  "cells": 232,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/008-signed-numbers-and-twos-complement": {
+  "cells": 139,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ }
+}
