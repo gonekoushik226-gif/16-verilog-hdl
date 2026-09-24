@@ -215,5 +215,26 @@
   "sim": "PASS",
   "synth": "N/A",
   "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/032-mux-2to1": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/033-mux-4to1": {
+  "cells": 3,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/034-mux-8to1-case": {
+  "cells": 32,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
