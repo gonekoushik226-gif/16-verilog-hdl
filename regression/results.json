@@ -1,0 +1,821 @@
+{
+ "00-foundations/001-first-module": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/002-wires-and-continuous-assignment": {
+  "cells": 7,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/003-reg-and-procedural-blocks": {
+  "cells": 26,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/004-number-literals-and-logic-values": {
+  "cells": 0,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/005-vectors-and-bit-selection": {
+  "cells": 24,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/006-bitwise-logical-reduction-operators": {
+  "cells": 33,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/007-arithmetic-relational-shift-operators": {
+  "cells": 232,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/008-signed-numbers-and-twos-complement": {
+  "cells": 139,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/009-conditional-statements": {
+  "cells": 31,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/010-blocking-vs-nonblocking": {
+  "cells": 4,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/011-parameters-and-localparams": {
+  "cells": 58,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/012-module-instantiation-and-hierarchy": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/013-generate-constructs": {
+  "cells": 46,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/014-functions-and-tasks": {
+  "cells": 55,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/015-simulation-timing-and-delays": {
+  "cells": null,
+  "lint": "N/A",
+  "sim": "PASS",
+  "synth": "N/A",
+  "testbenches": 1
+ },
+ "00-foundations/016-testbench-fundamentals": {
+  "cells": 34,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/017-and-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/018-or-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/019-not-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/020-nand-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/021-nor-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/022-xor-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/023-xnor-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/024-buffer-gate": {
+  "cells": 0,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/025-tri-state-buffer": {
+  "cells": null,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "N/A",
+  "testbenches": 1
+ },
+ "01-basic-gates/026-gate-modeling-styles": {
+  "cells": 14,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/027-nand-universal-gate": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/028-nor-universal-gate": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/029-parameterized-multi-input-gates": {
+  "cells": 12,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/030-boolean-function-implementation": {
+  "cells": 24,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/031-gate-delays-and-glitches": {
+  "cells": null,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "N/A",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/032-mux-2to1": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/033-mux-4to1": {
+  "cells": 3,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/034-mux-8to1-case": {
+  "cells": 32,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/035-parameterized-mux": {
+  "cells": 24,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/036-demux-1to4": {
+  "cells": 8,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/037-demux-parameterized": {
+  "cells": 36,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/038-decoder-2to4": {
+  "cells": 8,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/039-decoder-3to8-cascaded": {
+  "cells": 18,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/040-decoder-parameterized": {
+  "cells": 21,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/041-encoder-8to3": {
+  "cells": 50,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/042-priority-encoder-4to2": {
+  "cells": 5,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/043-priority-encoder-parameterized": {
+  "cells": 20,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/044-mux-based-logic-implementation": {
+  "cells": 3,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/045-address-decoder": {
+  "cells": 74,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/046-magnitude-comparator": {
+  "cells": 24,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/047-parameterized-comparator": {
+  "cells": 19,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/048-parity-generator-checker": {
+  "cells": 15,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/049-binary-gray-converters": {
+  "cells": 16,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/050-hex-to-seven-segment-decoder": {
+  "cells": 31,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/051-binary-to-bcd-double-dabble": {
+  "cells": 119,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/052-bcd-to-excess3-converter": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/053-one-hot-to-binary-converter": {
+  "cells": 109,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/054-leading-zero-counter": {
+  "cells": 88,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/055-population-count": {
+  "cells": 27,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/056-logical-arithmetic-shifter": {
+  "cells": 75,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/057-barrel-shifter": {
+  "cells": 49,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/058-barrel-rotator": {
+  "cells": 57,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/059-majority-voter-tmr": {
+  "cells": 87,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/060-thermometer-code-converter": {
+  "cells": 71,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/061-hamming-7-4-codec": {
+  "cells": 39,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/062-half-adder": {
+  "cells": 2,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/063-full-adder": {
+  "cells": 5,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/064-ripple-carry-adder-4bit": {
+  "cells": 28,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/065-ripple-carry-adder-parameterized": {
+  "cells": 28,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/066-half-subtractor": {
+  "cells": 2,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/067-full-subtractor": {
+  "cells": 5,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/068-adder-subtractor": {
+  "cells": 36,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/069-carry-lookahead-adder-4bit": {
+  "cells": 40,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/070-carry-lookahead-adder-16bit": {
+  "cells": 175,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/071-carry-select-adder": {
+  "cells": 89,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/072-carry-skip-adder": {
+  "cells": 72,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/073-carry-save-adder": {
+  "cells": 126,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/074-bcd-adder": {
+  "cells": 136,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/075-incrementer-decrementer": {
+  "cells": 23,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/076-array-multiplier-4x4": {
+  "cells": 169,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/077-signed-multiplier-baugh-wooley": {
+  "cells": 70,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/078-wallace-tree-multiplier": {
+  "cells": 102,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/079-radix4-booth-multiplier": {
+  "cells": 298,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/080-combinational-array-divider": {
+  "cells": 317,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/081-alu-4bit": {
+  "cells": 127,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/082-alu-8bit-hierarchical": {
+  "cells": 378,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/083-fixed-point-arithmetic": {
+  "cells": 520,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/084-floating-point-adder": {
+  "cells": 2107,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/085-sr-latch": {
+  "cells": null,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "N/A",
+  "testbenches": 1
+ },
+ "05-sequential-logic/086-d-latch": {
+  "cells": 1,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/087-d-flip-flop": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/088-d-flip-flop-reset-variants": {
+  "cells": 3,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/089-d-flip-flop-with-enable": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/090-jk-flip-flop": {
+  "cells": 8,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/091-t-flip-flop": {
+  "cells": 2,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/092-sr-flip-flop": {
+  "cells": 4,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/093-master-slave-d-flip-flop": {
+  "cells": 3,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/094-flip-flop-conversions": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/095-edge-detector": {
+  "cells": 5,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/096-pipeline-registers-intro": {
+  "cells": 27,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/097-clocked-sequential-circuit-analysis": {
+  "cells": 7,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/098-n-bit-register": {
+  "cells": 8,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/099-shift-register-siso": {
+  "cells": 8,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/100-shift-register-sipo": {
+  "cells": 16,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/101-shift-register-piso": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/102-universal-shift-register": {
+  "cells": 44,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/103-lfsr-random-generator": {
+  "cells": 22,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/104-binary-up-counter": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/105-up-down-counter": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/106-loadable-counter": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/107-modulo-n-counter": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/108-bcd-decade-counter": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/109-cascaded-bcd-counter": {
+  "cells": 51,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/110-ring-counter": {
+  "cells": 6,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/111-johnson-counter": {
+  "cells": 21,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/112-gray-code-counter": {
+  "cells": 12,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/113-ripple-counter": {
+  "cells": 11,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/114-clock-divider-even": {
+  "cells": 4,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/115-clock-divider-odd": {
+  "cells": 16,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/116-tick-generator": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/117-programmable-prescaler": {
+  "cells": 49,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ }
+}
