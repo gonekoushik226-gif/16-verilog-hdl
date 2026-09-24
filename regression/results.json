@@ -677,5 +677,47 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "06-registers-and-counters/098-n-bit-register": {
+  "cells": 8,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/099-shift-register-siso": {
+  "cells": 8,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/100-shift-register-sipo": {
+  "cells": 16,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/101-shift-register-piso": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/102-universal-shift-register": {
+  "cells": 44,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/103-lfsr-random-generator": {
+  "cells": 22,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
