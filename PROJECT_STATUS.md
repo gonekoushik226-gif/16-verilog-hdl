@@ -7,55 +7,40 @@ everything else is maintained by hand.
 
 ## Resume checkpoint
 
-* **Next program to implement:** 084 (`04-arithmetic-circuits/084-floating-point-adder`, the last program in category 04)
+* **Next program to implement:** 085 (`05-sequential-logic/085-sr-latch`)
 * **Currently being implemented:** none
 * **Tools required:** `sudo apt-get install -y iverilog yosys verilator`
-* **Last full regression:** all 83 implemented programs (001-083) pass
-  simulation; 81/83 pass Yosys generic synthesis (025 and 031 are
+* **Last full regression:** all 84 implemented programs (001-084) pass
+  simulation; 82/84 pass Yosys generic synthesis (025 and 031 are
   intentionally simulation-only, see their READMEs §13); lint is clean
-  across every program in 032-083.
-* **Category 04 (arithmetic-circuits) in progress** (062-083, 22/23 so
-  far): half/full adder, fixed and parameterized 4-bit ripple-carry
-  adders (the parameterized version cross-checked at WIDTH=4 exhaustive
-  and WIDTH=32 random), half/full subtractor, a combined adder/subtractor
-  with carry/overflow/zero/negative flags built by reusing the adder
-  hardware with two's-complement negation, a flat 4-bit carry-lookahead
-  adder and its hierarchical (two-level) 16-bit extension, a carry-select
-  adder, a carry-skip adder, a three-operand carry-save adder, a
-  cascaded-digit BCD adder with add-6 decimal correction, and a
-  half-adder/half-subtractor-chain incrementer/decrementer. Two
-  testbench bugs were found and fixed during development: program 068's
-  expected-value formula for subtraction used Verilog's 4-bit-wrapped
-  `a-b`, which silently drops the borrow bit that the RTL's `carry_out`
-  correctly reports (documented in that program's README §14); and
-  program 075's decrement-mode reference initially inverted the expected
-  `wrap` flag against Verilog's own 9-bit unsigned-subtraction wraparound
-  bit, which is already the correct borrow indicator with no inversion
-  needed (documented in that program's README, which also notes a
-  `generate`-based first attempt at the same RTL logic that produced a
-  Verilator `UNOPTFLAT` false positive, resolved by switching to a
-  procedural `for` loop). Category 04 continued with a linear-chain array
-  multiplier, a Baugh-Wooley signed multiplier (correction-term
-  derivation checked by hand for a 2-bit case and then exhaustively for
-  4 bits — see that program's README §13 for why it is derived
-  algebraically rather than copied from a remembered diagram), a
-  hand-derived Wallace-tree reduction multiplier, a parameterized
-  radix-4 Booth multiplier (exhaustive at WIDTH=6, random at WIDTH=16),
-  and a combinational restoring-division array. The same
-  `generate`-loop-over-a-shared-vector `UNOPTFLAT` false positive from
-  075 recurred in the divider's row module and was fixed the same way.
-  Category 04 continued with a single-`case` 4-bit ALU, an 8-bit
-  hierarchical ALU (separate arithmetic/logic/shift units plus a result
-  mux and a dedicated flag unit), and Q3.4 fixed-point saturating
-  add/rounding-saturating multiply. A third testbench bug was found and
-  fixed: program 083's multiply-rounding reference initially used
-  round-half-*away-from-zero* for negative products (`-$rtoi(-x+0.5)`)
-  instead of the design's documented round-half-*up* rule, which
-  disagrees exactly at `.5` ties (e.g. `-2.5` rounds to `-2` under
-  round-half-up but `-3` under round-half-away-from-zero); fixed to use
-  the same floor-based `(product+bias)>>>FRAC` construction as the RTL
-  (documented in that program's README §10). Only 084
-  (floating-point-adder, Expert difficulty) remains in this category.
+  across every program in 032-084.
+* **Category 04 (arithmetic-circuits) is complete** (062-084, 23/23
+  programs): half/full adders and subtractors; a combined
+  adder/subtractor with carry/overflow/zero/negative flags via
+  two's-complement negation; flat and hierarchical (two-level)
+  carry-lookahead, carry-select, carry-skip, and three-operand
+  carry-save adders; a cascaded-digit BCD adder; a
+  half-adder/half-subtractor-chain incrementer/decrementer; a
+  linear-chain array multiplier; a Baugh-Wooley signed multiplier
+  (correction terms derived algebraically, verified by hand for 2 bits
+  and exhaustively for 4); a hand-derived Wallace-tree reduction
+  multiplier; a parameterized radix-4 Booth multiplier; a combinational
+  restoring-division array; a single-`case` 4-bit ALU and an 8-bit
+  hierarchical ALU (separate arithmetic/logic/shift units, result mux,
+  dedicated flag unit); Q3.4 fixed-point saturating add / rounding-
+  saturating multiply; and an IEEE-754 single-precision floating-point
+  adder (unpack/align/add-or-subtract/normalize-round, educational
+  subset — normal numbers and zero only, no NaN/Infinity/subnormals,
+  documented in that program's README §13). Three testbench bugs were
+  found and fixed during development, each documented in its program's
+  own README: 068's subtraction reference dropped the borrow bit by
+  using Verilog's 4-bit-wrapped `a-b` instead of a widened-minuend
+  computation; 075's decrement-mode `wrap` reference had an unneeded
+  sign inversion; 083's multiply-rounding reference used round-half-
+  away-from-zero instead of the design's documented round-half-up rule,
+  disagreeing exactly at `.5` ties. A `generate`-loop-over-a-shared-
+  vector Verilator `UNOPTFLAT` false positive recurred twice (075, 080)
+  and was fixed both times by switching to a procedural `for` loop.
 * **Category 02 (multiplexers-encoders-decoders) is complete** (032-045,
   14/14 programs): 2:1/4:1/8:1/N:1 muxes, 1:4/N demuxes, 2:4/3:8/N:2^N
   decoders, an 8:3 encoder, 4:2/N-bit priority encoders, a mux-based
@@ -94,7 +79,7 @@ is, or will be claimed to be, **FPGA HARDWARE VERIFIED**.
 ## Regression summary
 
 <!-- REGRESSION:BEGIN -->
-Planned: **324** · Implemented: **83** · Simulation verified: **83** · Not yet implemented: **241**
+Planned: **324** · Implemented: **84** · Simulation verified: **84** · Not yet implemented: **240**
 
 | Category | Planned | Implemented | Simulation verified |
 |---|---:|---:|---:|
@@ -102,7 +87,7 @@ Planned: **324** · Implemented: **83** · Simulation verified: **83** · Not ye
 | 01-basic-gates | 15 | 15 | 15 |
 | 02-multiplexers-encoders-decoders | 14 | 14 | 14 |
 | 03-combinational-logic | 16 | 16 | 16 |
-| 04-arithmetic-circuits | 23 | 22 | 22 |
+| 04-arithmetic-circuits | 23 | 23 | 23 |
 | 05-sequential-logic | 13 | 0 | 0 |
 | 06-registers-and-counters | 20 | 0 | 0 |
 | 07-finite-state-machines | 17 | 0 | 0 |
@@ -205,10 +190,11 @@ Planned: **324** · Implemented: **83** · Simulation verified: **83** · Not ye
 | 081 | [alu-4bit](04-arithmetic-circuits/081-alu-4bit/) | 1 | PASS | PASS (127 cells) | CLEAN |
 | 082 | [alu-8bit-hierarchical](04-arithmetic-circuits/082-alu-8bit-hierarchical/) | 1 | PASS | PASS (378 cells) | CLEAN |
 | 083 | [fixed-point-arithmetic](04-arithmetic-circuits/083-fixed-point-arithmetic/) | 1 | PASS | PASS (520 cells) | CLEAN |
+| 084 | [floating-point-adder](04-arithmetic-circuits/084-floating-point-adder/) | 1 | PASS | PASS (2107 cells) | CLEAN |
 
-### Not yet implemented (241)
+### Not yet implemented (240)
 
-084 floating-point-adder, 085 sr-latch, 086 d-latch, 087 d-flip-flop, 088 d-flip-flop-reset-variants, 089 d-flip-flop-with-enable, 090 jk-flip-flop, 091 t-flip-flop, 092 sr-flip-flop, 093 master-slave-d-flip-flop, 094 flip-flop-conversions, 095 edge-detector, 096 pipeline-registers-intro, 097 clocked-sequential-circuit-analysis, 098 n-bit-register, 099 shift-register-siso, 100 shift-register-sipo, 101 shift-register-piso, 102 universal-shift-register, 103 lfsr-random-generator, 104 binary-up-counter, 105 up-down-counter, 106 loadable-counter, 107 modulo-n-counter, 108 bcd-decade-counter, 109 cascaded-bcd-counter, 110 ring-counter, 111 johnson-counter, 112 gray-code-counter, 113 ripple-counter, 114 clock-divider-even, 115 clock-divider-odd, 116 tick-generator, 117 programmable-prescaler, 118 moore-sequence-detector, 119 mealy-sequence-detector, 120 fsm-state-encoding-styles, 121 divisible-by-three-fsm, 122 serial-adder-fsm, 123 traffic-light-controller, 124 traffic-light-with-pedestrian, 125 vending-machine, 126 elevator-controller, 127 combination-lock, 128 washing-machine-controller, 129 parking-lot-counter, 130 four-phase-handshake, 131 gcd-fsmd, 132 safe-fsm-recovery, 133 hierarchical-fsm-microwave, 134 stepper-motor-controller, 135 rom-case, 136 rom-readmemh, 137 synchronous-rom, 138 single-port-ram-async-read, 139 single-port-ram-sync-read, 140 byte-enable-ram, 141 simple-dual-port-ram, 142 true-dual-port-ram, 143 register-file, 144 synchronous-fifo-counter, 145 synchronous-fifo-parameterized, 146 fwft-fifo, 147 asynchronous-fifo, 148 lifo-stack, 149 content-addressable-memory, 150 ping-pong-buffer, 151 sram-controller, 152 memory-bist-march, 153 ecc-memory-secded, 154 button-debouncer, 155 pwm-generator, 156 programmable-timer, 157 watchdog-timer, 158 seven-segment-display-controller, 159 led-pattern-controller, 160 keypad-scanner, 161 stopwatch, 162 digital-clock, 163 frequency-counter, 164 pulse-width-measurement, 165 servo-controller, 166 quadrature-encoder-decoder, 167 ps2-keyboard-receiver, 168 lcd-controller-hd44780, 169 vga-sync-generator, 170 tone-generator, 171 ultrasonic-sensor-interface, 172 sigma-delta-dac, 173 ws2812-led-driver, 174 baud-rate-generator, 175 uart-transmitter, 176 uart-receiver, 177 uart-transceiver-with-fifos, 178 configurable-uart, 179 spi-master, 180 spi-slave, 181 i2c-master, 182 i2c-slave, 183 crc-serial-generator, 184 crc32-parallel, 185 manchester-codec, 186 nrzi-bit-stuffing, 187 lfsr-scrambler, 188 one-wire-master, 189 i2s-transmitter, 190 packet-framer-deframer, 191 8b10b-encoder-decoder, 192 valid-ready-handshake, 193 register-slice-skid-buffer, 194 apb-slave-register-bank, 195 apb-master, 196 apb-interconnect, 197 ahb-lite-slave-sram, 198 ahb-lite-master, 199 ahb-to-apb-bridge, 200 axi4-lite-slave, 201 axi4-lite-master, 202 axi4-stream-fifo, 203 axi4-stream-width-converter, 204 axi4-burst-memory-slave, 205 wishbone-slave, 206 multi-master-bus-arbiter, 207 apb-gpio-peripheral, 208 axi-lite-to-apb-bridge, 209 register-block-field-types, 210 parameterized-delay-line, 211 pipelined-adder, 212 pipelined-multiplier, 213 shift-add-multiplier, 214 booth-multiplier-sequential, 215 restoring-divider, 216 non-restoring-divider, 217 integer-square-root, 218 mac-unit, 219 fir-filter, 220 moving-average-filter, 221 cic-decimator, 222 cordic-sin-cos, 223 dds-nco, 224 fixed-priority-arbiter, 225 round-robin-arbiter, 226 two-flop-synchronizer, 227 pulse-synchronizer, 228 handshake-cdc-synchronizer, 229 reset-synchronizer, 230 clock-gating-cell, 231 credit-flow-control, 232 bitonic-sorting-network, 233 histogram-engine, 234 systolic-matrix-multiplier, 235 run-length-encoder, 236 program-counter, 237 instruction-memory, 238 data-memory, 239 risc-register-file, 240 risc-v-alu, 241 alu-control, 242 immediate-generator, 243 instruction-decoder, 244 main-control-unit, 245 branch-unit, 246 load-store-unit, 247 pipeline-register-stage, 248 hazard-detection-unit, 249 forwarding-unit, 250 branch-predictor-bht, 251 branch-target-buffer, 252 interrupt-controller, 253 csr-unit, 254 accumulator-cpu-8bit, 255 cpu-8bit-with-stack, 256 risc16-single-cycle, 257 risc16-multi-cycle, 258 rv32i-single-cycle, 259 rv32i-multi-cycle, 260 rv32i-pipelined, 261 rv32i-pipelined-branch-prediction, 262 stack-machine-cpu, 263 rv32i-with-interrupts, 264 rv32im-with-muldiv, 265 direct-mapped-cache, 266 set-associative-cache, 267 dma-controller, 268 multi-channel-dma, 269 sdram-controller, 270 bus-matrix-2x2, 271 packet-parser, 272 packet-fifo-with-drop, 273 crossbar-switch, 274 ternary-cam, 275 performance-counters, 276 token-bucket-shaper, 277 multi-port-memory-arbiter, 278 cdc-apb-bridge, 279 reference-model-testbench, 280 file-driven-testbench, 281 bus-functional-model, 282 random-testing-with-seeds, 283 constrained-random-stimulus, 284 scoreboard-checking, 285 assertion-monitors, 286 functional-coverage, 287 layered-testbench, 288 error-injection-testing, 289 regression-seed-sweep, 290 waveform-debugging, 291 systemverilog-immediate-assertions, 292 exhaustive-equivalence-checking, 293 led-blinker, 294 debounced-counter-display, 295 breathing-led, 296 uart-echo, 297 uart-led-control, 298 vga-test-pattern, 299 vga-bouncing-box, 300 vga-pong, 301 keypad-display, 302 stopwatch-display, 303 frequency-meter-display, 304 bram-inference-templates, 305 dsp-inference-mac, 306 power-on-reset, 307 spi-adc-interface, 308 i2c-temperature-sensor, 309 uart-apb-debug-bridge, 310 apb-peripheral-subsystem, 311 rv32i-microcontroller-soc, 312 axi-lite-dma-engine, 313 image-processing-pipeline, 314 fir-dsp-subsystem, 315 aes128-encryption-core, 316 sha256-hash-core, 317 ethernet-mac-lite, 318 spi-flash-controller, 319 pwm-motor-controller-subsystem, 320 packet-switch-4port, 321 cache-memory-subsystem, 322 traffic-intersection-system, 323 logic-analyzer-capture-engine, 324 vga-frame-buffer-system
+085 sr-latch, 086 d-latch, 087 d-flip-flop, 088 d-flip-flop-reset-variants, 089 d-flip-flop-with-enable, 090 jk-flip-flop, 091 t-flip-flop, 092 sr-flip-flop, 093 master-slave-d-flip-flop, 094 flip-flop-conversions, 095 edge-detector, 096 pipeline-registers-intro, 097 clocked-sequential-circuit-analysis, 098 n-bit-register, 099 shift-register-siso, 100 shift-register-sipo, 101 shift-register-piso, 102 universal-shift-register, 103 lfsr-random-generator, 104 binary-up-counter, 105 up-down-counter, 106 loadable-counter, 107 modulo-n-counter, 108 bcd-decade-counter, 109 cascaded-bcd-counter, 110 ring-counter, 111 johnson-counter, 112 gray-code-counter, 113 ripple-counter, 114 clock-divider-even, 115 clock-divider-odd, 116 tick-generator, 117 programmable-prescaler, 118 moore-sequence-detector, 119 mealy-sequence-detector, 120 fsm-state-encoding-styles, 121 divisible-by-three-fsm, 122 serial-adder-fsm, 123 traffic-light-controller, 124 traffic-light-with-pedestrian, 125 vending-machine, 126 elevator-controller, 127 combination-lock, 128 washing-machine-controller, 129 parking-lot-counter, 130 four-phase-handshake, 131 gcd-fsmd, 132 safe-fsm-recovery, 133 hierarchical-fsm-microwave, 134 stepper-motor-controller, 135 rom-case, 136 rom-readmemh, 137 synchronous-rom, 138 single-port-ram-async-read, 139 single-port-ram-sync-read, 140 byte-enable-ram, 141 simple-dual-port-ram, 142 true-dual-port-ram, 143 register-file, 144 synchronous-fifo-counter, 145 synchronous-fifo-parameterized, 146 fwft-fifo, 147 asynchronous-fifo, 148 lifo-stack, 149 content-addressable-memory, 150 ping-pong-buffer, 151 sram-controller, 152 memory-bist-march, 153 ecc-memory-secded, 154 button-debouncer, 155 pwm-generator, 156 programmable-timer, 157 watchdog-timer, 158 seven-segment-display-controller, 159 led-pattern-controller, 160 keypad-scanner, 161 stopwatch, 162 digital-clock, 163 frequency-counter, 164 pulse-width-measurement, 165 servo-controller, 166 quadrature-encoder-decoder, 167 ps2-keyboard-receiver, 168 lcd-controller-hd44780, 169 vga-sync-generator, 170 tone-generator, 171 ultrasonic-sensor-interface, 172 sigma-delta-dac, 173 ws2812-led-driver, 174 baud-rate-generator, 175 uart-transmitter, 176 uart-receiver, 177 uart-transceiver-with-fifos, 178 configurable-uart, 179 spi-master, 180 spi-slave, 181 i2c-master, 182 i2c-slave, 183 crc-serial-generator, 184 crc32-parallel, 185 manchester-codec, 186 nrzi-bit-stuffing, 187 lfsr-scrambler, 188 one-wire-master, 189 i2s-transmitter, 190 packet-framer-deframer, 191 8b10b-encoder-decoder, 192 valid-ready-handshake, 193 register-slice-skid-buffer, 194 apb-slave-register-bank, 195 apb-master, 196 apb-interconnect, 197 ahb-lite-slave-sram, 198 ahb-lite-master, 199 ahb-to-apb-bridge, 200 axi4-lite-slave, 201 axi4-lite-master, 202 axi4-stream-fifo, 203 axi4-stream-width-converter, 204 axi4-burst-memory-slave, 205 wishbone-slave, 206 multi-master-bus-arbiter, 207 apb-gpio-peripheral, 208 axi-lite-to-apb-bridge, 209 register-block-field-types, 210 parameterized-delay-line, 211 pipelined-adder, 212 pipelined-multiplier, 213 shift-add-multiplier, 214 booth-multiplier-sequential, 215 restoring-divider, 216 non-restoring-divider, 217 integer-square-root, 218 mac-unit, 219 fir-filter, 220 moving-average-filter, 221 cic-decimator, 222 cordic-sin-cos, 223 dds-nco, 224 fixed-priority-arbiter, 225 round-robin-arbiter, 226 two-flop-synchronizer, 227 pulse-synchronizer, 228 handshake-cdc-synchronizer, 229 reset-synchronizer, 230 clock-gating-cell, 231 credit-flow-control, 232 bitonic-sorting-network, 233 histogram-engine, 234 systolic-matrix-multiplier, 235 run-length-encoder, 236 program-counter, 237 instruction-memory, 238 data-memory, 239 risc-register-file, 240 risc-v-alu, 241 alu-control, 242 immediate-generator, 243 instruction-decoder, 244 main-control-unit, 245 branch-unit, 246 load-store-unit, 247 pipeline-register-stage, 248 hazard-detection-unit, 249 forwarding-unit, 250 branch-predictor-bht, 251 branch-target-buffer, 252 interrupt-controller, 253 csr-unit, 254 accumulator-cpu-8bit, 255 cpu-8bit-with-stack, 256 risc16-single-cycle, 257 risc16-multi-cycle, 258 rv32i-single-cycle, 259 rv32i-multi-cycle, 260 rv32i-pipelined, 261 rv32i-pipelined-branch-prediction, 262 stack-machine-cpu, 263 rv32i-with-interrupts, 264 rv32im-with-muldiv, 265 direct-mapped-cache, 266 set-associative-cache, 267 dma-controller, 268 multi-channel-dma, 269 sdram-controller, 270 bus-matrix-2x2, 271 packet-parser, 272 packet-fifo-with-drop, 273 crossbar-switch, 274 ternary-cam, 275 performance-counters, 276 token-bucket-shaper, 277 multi-port-memory-arbiter, 278 cdc-apb-bridge, 279 reference-model-testbench, 280 file-driven-testbench, 281 bus-functional-model, 282 random-testing-with-seeds, 283 constrained-random-stimulus, 284 scoreboard-checking, 285 assertion-monitors, 286 functional-coverage, 287 layered-testbench, 288 error-injection-testing, 289 regression-seed-sweep, 290 waveform-debugging, 291 systemverilog-immediate-assertions, 292 exhaustive-equivalence-checking, 293 led-blinker, 294 debounced-counter-display, 295 breathing-led, 296 uart-echo, 297 uart-led-control, 298 vga-test-pattern, 299 vga-bouncing-box, 300 vga-pong, 301 keypad-display, 302 stopwatch-display, 303 frequency-meter-display, 304 bram-inference-templates, 305 dsp-inference-mac, 306 power-on-reset, 307 spi-adc-interface, 308 i2c-temperature-sensor, 309 uart-apb-debug-bridge, 310 apb-peripheral-subsystem, 311 rv32i-microcontroller-soc, 312 axi-lite-dma-engine, 313 image-processing-pipeline, 314 fir-dsp-subsystem, 315 aes128-encryption-core, 316 sha256-hash-core, 317 ethernet-mac-lite, 318 spi-flash-controller, 319 pwm-motor-controller-subsystem, 320 packet-switch-4port, 321 cache-memory-subsystem, 322 traffic-intersection-system, 323 logic-analyzer-capture-engine, 324 vga-frame-buffer-system
 <!-- REGRESSION:END -->
 
 ## Project decisions

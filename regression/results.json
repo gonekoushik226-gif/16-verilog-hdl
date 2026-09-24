@@ -579,5 +579,12 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "04-arithmetic-circuits/084-floating-point-adder": {
+  "cells": 2107,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
