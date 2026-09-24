@@ -523,5 +523,40 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "04-arithmetic-circuits/076-array-multiplier-4x4": {
+  "cells": 169,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/077-signed-multiplier-baugh-wooley": {
+  "cells": 70,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/078-wallace-tree-multiplier": {
+  "cells": 102,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/079-radix4-booth-multiplier": {
+  "cells": 298,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/080-combinational-array-divider": {
+  "cells": 317,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
