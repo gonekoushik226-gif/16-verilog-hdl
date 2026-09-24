@@ -313,5 +313,117 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "03-combinational-logic/046-magnitude-comparator": {
+  "cells": 24,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/047-parameterized-comparator": {
+  "cells": 19,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/048-parity-generator-checker": {
+  "cells": 15,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/049-binary-gray-converters": {
+  "cells": 16,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/050-hex-to-seven-segment-decoder": {
+  "cells": 31,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/051-binary-to-bcd-double-dabble": {
+  "cells": 119,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/052-bcd-to-excess3-converter": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/053-one-hot-to-binary-converter": {
+  "cells": 109,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/054-leading-zero-counter": {
+  "cells": 88,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/055-population-count": {
+  "cells": 27,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/056-logical-arithmetic-shifter": {
+  "cells": 75,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/057-barrel-shifter": {
+  "cells": 49,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/058-barrel-rotator": {
+  "cells": 57,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/059-majority-voter-tmr": {
+  "cells": 87,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/060-thermometer-code-converter": {
+  "cells": 71,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "03-combinational-logic/061-hamming-7-4-codec": {
+  "cells": 39,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
