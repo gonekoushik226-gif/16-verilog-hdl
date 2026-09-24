@@ -278,5 +278,19 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/041-encoder-8to3": {
+  "cells": 50,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/042-priority-encoder-4to2": {
+  "cells": 5,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
