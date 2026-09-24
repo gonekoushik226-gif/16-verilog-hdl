@@ -908,5 +908,19 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "07-finite-state-machines/131-gcd-fsmd": {
+  "cells": 162,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/132-safe-fsm-recovery": {
+  "cells": 27,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
