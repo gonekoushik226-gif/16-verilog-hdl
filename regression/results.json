@@ -936,5 +936,26 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "08-memory/135-rom-case": {
+  "cells": 25,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "08-memory/136-rom-readmemh": {
+  "cells": 26,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "08-memory/137-synchronous-rom": {
+  "cells": 33,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
