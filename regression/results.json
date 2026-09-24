@@ -558,5 +558,26 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "04-arithmetic-circuits/081-alu-4bit": {
+  "cells": 127,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/082-alu-8bit-hierarchical": {
+  "cells": 378,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/083-fixed-point-arithmetic": {
+  "cells": 520,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
