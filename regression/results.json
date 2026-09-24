@@ -873,5 +873,12 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "07-finite-state-machines/126-elevator-controller": {
+  "cells": 210,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
