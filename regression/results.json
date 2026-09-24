@@ -649,5 +649,33 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "05-sequential-logic/094-flip-flop-conversions": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/095-edge-detector": {
+  "cells": 5,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/096-pipeline-registers-intro": {
+  "cells": 27,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/097-clocked-sequential-circuit-analysis": {
+  "cells": 7,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
