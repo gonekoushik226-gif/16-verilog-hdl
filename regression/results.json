@@ -110,5 +110,110 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "01-basic-gates/017-and-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/018-or-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/019-not-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/020-nand-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/021-nor-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/022-xor-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/023-xnor-gate": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/024-buffer-gate": {
+  "cells": 0,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/025-tri-state-buffer": {
+  "cells": null,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "N/A",
+  "testbenches": 1
+ },
+ "01-basic-gates/026-gate-modeling-styles": {
+  "cells": 14,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/027-nand-universal-gate": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/028-nor-universal-gate": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/029-parameterized-multi-input-gates": {
+  "cells": 12,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/030-boolean-function-implementation": {
+  "cells": 24,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "01-basic-gates/031-gate-delays-and-glitches": {
+  "cells": null,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "N/A",
+  "testbenches": 1
  }
 }
