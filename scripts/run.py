@@ -167,21 +167,40 @@ def simulate(prog, conf, build):
     return results
 
 
+def find_top(prog):
+    """Return the single root module of src/ (not instantiated elsewhere),
+    or None when there are zero or several roots."""
+    text = ""
+    for f in sorted(prog.glob("src/**/*.v")):
+        code = re.sub(r"/\*.*?\*/", "", f.read_text(), flags=re.S)
+        text += re.sub(r"//.*", "", code) + "\n"
+    modules = re.findall(r"^\s*module\s+(\w+)", text, re.M)
+    roots = [m for m in modules
+             if not re.search(r"^\s*" + m + r"\s*(#\s*\(|\w+\s*\()", text, re.M)]
+    return roots[0] if len(roots) == 1 else None
+
+
 def synthesize(prog, conf, build):
     if conf["SYNTH"].lower() != "yes":
         return {"status": "N/A", "note": conf["SYNTH_NOTE"] or "not synthesizable by intent"}
     src = rel(prog, sorted(prog.glob("src/**/*.v")))
-    top = f"-top {conf['TOP']}" if conf["TOP"] else ""
+    top_name = conf["TOP"] or find_top(prog)
+    top = f"-top {top_name}" if top_name else ""
     incs = " ".join(include_dirs(prog))
     script = (f"read_verilog -D SYNTHESIS {incs} {' '.join(src)}; "
-              f"synth {top}; check -assert; stat")
+              f"synth {top}; check -assert; stat {top}")
     logf = build / "synth.log"
     rc, out = run_cmd(["yosys", "-q", "-l", str(logf), "-p", script], prog,
                       timeout=SIM_TIMEOUT_S)
     log = logf.read_text() if logf.exists() else out
     latches = re.findall(r"Latch inferred for signal `([^']+)'", log)
-    cells = re.findall(r"Number of cells:\s+(\d+)", log)
-    res = {"status": "PASS", "cells": int(cells[-1]) if cells else None}
+    stat = log[log.rfind("Printing statistics"):] if "Printing statistics" in log else log
+    cells = [int(c) for c in re.findall(r"Number of cells:\s+(\d+)", stat)]
+    if top_name:        # hierarchy total is printed last
+        ncells = cells[-1] if cells else None
+    else:               # several independent top modules: sum them
+        ncells = sum(cells) if cells else None
+    res = {"status": "PASS", "cells": ncells, "top": top_name}
     if rc != 0:
         err = [l for l in (out + log).splitlines() if "ERROR" in l]
         res.update(status="FAIL", note=(err[-1] if err else out[-400:]))

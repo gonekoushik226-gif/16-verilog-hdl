@@ -54,5 +54,61 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "00-foundations/009-conditional-statements": {
+  "cells": 31,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/010-blocking-vs-nonblocking": {
+  "cells": 4,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/011-parameters-and-localparams": {
+  "cells": 58,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/012-module-instantiation-and-hierarchy": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/013-generate-constructs": {
+  "cells": 46,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/014-functions-and-tasks": {
+  "cells": 55,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "00-foundations/015-simulation-timing-and-delays": {
+  "cells": null,
+  "lint": "N/A",
+  "sim": "PASS",
+  "synth": "N/A",
+  "testbenches": 1
+ },
+ "00-foundations/016-testbench-fundamentals": {
+  "cells": 34,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
