@@ -250,5 +250,19 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/037-demux-parameterized": {
+  "cells": 36,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/038-decoder-2to4": {
+  "cells": 8,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
