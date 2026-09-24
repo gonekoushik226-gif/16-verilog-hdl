@@ -7,23 +7,28 @@ everything else is maintained by hand.
 
 ## Resume checkpoint
 
-* **Next program to implement:** 121 (`07-finite-state-machines/121-divisible-by-three-fsm`)
+* **Next program to implement:** 124 (`07-finite-state-machines/124-traffic-light-with-pedestrian`)
 * **Currently being implemented:** none
 * **Tools required:** `sudo apt-get install -y iverilog yosys verilator`
-* **Last full regression:** all 120 implemented programs (001-120) pass
-  simulation; 117/120 pass Yosys generic synthesis (025, 031, and 085 are
+* **Last full regression:** all 123 implemented programs (001-123) pass
+  simulation; 120/123 pass Yosys generic synthesis (025, 031, and 085 are
   intentionally simulation-only, see their READMEs §13); lint is clean
   except for four accepted warnings (085's cross-coupled NOR gates,
   086's and 093's deliberately-inferred latches, and 114's provably-safe
   constant-truncation warning — see each program's README §13).
-* **Category 07 (finite-state-machines) in progress** (118-120 done so
-  far, 3/17): a 5-state Moore "1011" overlapping sequence detector, its
+* **Category 07 (finite-state-machines) in progress** (118-123 done so
+  far, 6/17): a 5-state Moore "1011" overlapping sequence detector, its
   4-state Mealy equivalent (one fewer state since the match is signalled
   on a transition rather than requiring a dedicated matched state, and
-  its output asserts one cycle earlier), and the same Moore detector
-  re-implemented three times with binary/Gray/one-hot state encodings,
-  cross-checked cycle-by-cycle against each other and a shared reference
-  model to prove encoding has no behavioral effect.
+  its output asserts one cycle earlier), the same Moore detector
+  re-implemented three times with binary/Gray/one-hot state encodings
+  (cross-checked cycle-by-cycle against a shared reference model), a
+  3-state remainder-tracking divisible-by-3 FSM derived directly from
+  the `(2r+b) mod 3` recurrence (exhaustively verified over all 8-bit
+  values plus randomized 20-bit values), a 2-state Mealy bit-serial
+  adder whose single state bit doubles as the arithmetic carry, and a
+  timed Moore traffic-light controller (internal counter gating
+  RED/GREEN/YELLOW dwell times, sized generically via `$clog2`).
 * **Category 06 (registers-and-counters) is complete** (098-117, 20/20
   programs): a parameterized parallel-load register with enable; SISO/
   SIPO/PISO shift registers and a 74194-style universal shift register;
@@ -141,7 +146,7 @@ is, or will be claimed to be, **FPGA HARDWARE VERIFIED**.
 ## Regression summary
 
 <!-- REGRESSION:BEGIN -->
-Planned: **324** · Implemented: **120** · Simulation verified: **120** · Not yet implemented: **204**
+Planned: **324** · Implemented: **123** · Simulation verified: **123** · Not yet implemented: **201**
 
 | Category | Planned | Implemented | Simulation verified |
 |---|---:|---:|---:|
@@ -152,7 +157,7 @@ Planned: **324** · Implemented: **120** · Simulation verified: **120** · Not 
 | 04-arithmetic-circuits | 23 | 23 | 23 |
 | 05-sequential-logic | 13 | 13 | 13 |
 | 06-registers-and-counters | 20 | 20 | 20 |
-| 07-finite-state-machines | 17 | 3 | 3 |
+| 07-finite-state-machines | 17 | 6 | 6 |
 | 08-memory | 19 | 0 | 0 |
 | 09-digital-systems | 20 | 0 | 0 |
 | 10-communication | 18 | 0 | 0 |
@@ -289,10 +294,13 @@ Planned: **324** · Implemented: **120** · Simulation verified: **120** · Not 
 | 118 | [moore-sequence-detector](07-finite-state-machines/118-moore-sequence-detector/) | 1 | PASS | PASS (29 cells) | CLEAN |
 | 119 | [mealy-sequence-detector](07-finite-state-machines/119-mealy-sequence-detector/) | 1 | PASS | PASS (14 cells) | CLEAN |
 | 120 | [fsm-state-encoding-styles](07-finite-state-machines/120-fsm-state-encoding-styles/) | 1 | PASS | PASS (97 cells) | CLEAN |
+| 121 | [divisible-by-three-fsm](07-finite-state-machines/121-divisible-by-three-fsm/) | 1 | PASS | PASS (10 cells) | CLEAN |
+| 122 | [serial-adder-fsm](07-finite-state-machines/122-serial-adder-fsm/) | 1 | PASS | PASS (9 cells) | CLEAN |
+| 123 | [traffic-light-controller](07-finite-state-machines/123-traffic-light-controller/) | 1 | PASS | PASS (53 cells) | CLEAN |
 
-### Not yet implemented (204)
+### Not yet implemented (201)
 
-121 divisible-by-three-fsm, 122 serial-adder-fsm, 123 traffic-light-controller, 124 traffic-light-with-pedestrian, 125 vending-machine, 126 elevator-controller, 127 combination-lock, 128 washing-machine-controller, 129 parking-lot-counter, 130 four-phase-handshake, 131 gcd-fsmd, 132 safe-fsm-recovery, 133 hierarchical-fsm-microwave, 134 stepper-motor-controller, 135 rom-case, 136 rom-readmemh, 137 synchronous-rom, 138 single-port-ram-async-read, 139 single-port-ram-sync-read, 140 byte-enable-ram, 141 simple-dual-port-ram, 142 true-dual-port-ram, 143 register-file, 144 synchronous-fifo-counter, 145 synchronous-fifo-parameterized, 146 fwft-fifo, 147 asynchronous-fifo, 148 lifo-stack, 149 content-addressable-memory, 150 ping-pong-buffer, 151 sram-controller, 152 memory-bist-march, 153 ecc-memory-secded, 154 button-debouncer, 155 pwm-generator, 156 programmable-timer, 157 watchdog-timer, 158 seven-segment-display-controller, 159 led-pattern-controller, 160 keypad-scanner, 161 stopwatch, 162 digital-clock, 163 frequency-counter, 164 pulse-width-measurement, 165 servo-controller, 166 quadrature-encoder-decoder, 167 ps2-keyboard-receiver, 168 lcd-controller-hd44780, 169 vga-sync-generator, 170 tone-generator, 171 ultrasonic-sensor-interface, 172 sigma-delta-dac, 173 ws2812-led-driver, 174 baud-rate-generator, 175 uart-transmitter, 176 uart-receiver, 177 uart-transceiver-with-fifos, 178 configurable-uart, 179 spi-master, 180 spi-slave, 181 i2c-master, 182 i2c-slave, 183 crc-serial-generator, 184 crc32-parallel, 185 manchester-codec, 186 nrzi-bit-stuffing, 187 lfsr-scrambler, 188 one-wire-master, 189 i2s-transmitter, 190 packet-framer-deframer, 191 8b10b-encoder-decoder, 192 valid-ready-handshake, 193 register-slice-skid-buffer, 194 apb-slave-register-bank, 195 apb-master, 196 apb-interconnect, 197 ahb-lite-slave-sram, 198 ahb-lite-master, 199 ahb-to-apb-bridge, 200 axi4-lite-slave, 201 axi4-lite-master, 202 axi4-stream-fifo, 203 axi4-stream-width-converter, 204 axi4-burst-memory-slave, 205 wishbone-slave, 206 multi-master-bus-arbiter, 207 apb-gpio-peripheral, 208 axi-lite-to-apb-bridge, 209 register-block-field-types, 210 parameterized-delay-line, 211 pipelined-adder, 212 pipelined-multiplier, 213 shift-add-multiplier, 214 booth-multiplier-sequential, 215 restoring-divider, 216 non-restoring-divider, 217 integer-square-root, 218 mac-unit, 219 fir-filter, 220 moving-average-filter, 221 cic-decimator, 222 cordic-sin-cos, 223 dds-nco, 224 fixed-priority-arbiter, 225 round-robin-arbiter, 226 two-flop-synchronizer, 227 pulse-synchronizer, 228 handshake-cdc-synchronizer, 229 reset-synchronizer, 230 clock-gating-cell, 231 credit-flow-control, 232 bitonic-sorting-network, 233 histogram-engine, 234 systolic-matrix-multiplier, 235 run-length-encoder, 236 program-counter, 237 instruction-memory, 238 data-memory, 239 risc-register-file, 240 risc-v-alu, 241 alu-control, 242 immediate-generator, 243 instruction-decoder, 244 main-control-unit, 245 branch-unit, 246 load-store-unit, 247 pipeline-register-stage, 248 hazard-detection-unit, 249 forwarding-unit, 250 branch-predictor-bht, 251 branch-target-buffer, 252 interrupt-controller, 253 csr-unit, 254 accumulator-cpu-8bit, 255 cpu-8bit-with-stack, 256 risc16-single-cycle, 257 risc16-multi-cycle, 258 rv32i-single-cycle, 259 rv32i-multi-cycle, 260 rv32i-pipelined, 261 rv32i-pipelined-branch-prediction, 262 stack-machine-cpu, 263 rv32i-with-interrupts, 264 rv32im-with-muldiv, 265 direct-mapped-cache, 266 set-associative-cache, 267 dma-controller, 268 multi-channel-dma, 269 sdram-controller, 270 bus-matrix-2x2, 271 packet-parser, 272 packet-fifo-with-drop, 273 crossbar-switch, 274 ternary-cam, 275 performance-counters, 276 token-bucket-shaper, 277 multi-port-memory-arbiter, 278 cdc-apb-bridge, 279 reference-model-testbench, 280 file-driven-testbench, 281 bus-functional-model, 282 random-testing-with-seeds, 283 constrained-random-stimulus, 284 scoreboard-checking, 285 assertion-monitors, 286 functional-coverage, 287 layered-testbench, 288 error-injection-testing, 289 regression-seed-sweep, 290 waveform-debugging, 291 systemverilog-immediate-assertions, 292 exhaustive-equivalence-checking, 293 led-blinker, 294 debounced-counter-display, 295 breathing-led, 296 uart-echo, 297 uart-led-control, 298 vga-test-pattern, 299 vga-bouncing-box, 300 vga-pong, 301 keypad-display, 302 stopwatch-display, 303 frequency-meter-display, 304 bram-inference-templates, 305 dsp-inference-mac, 306 power-on-reset, 307 spi-adc-interface, 308 i2c-temperature-sensor, 309 uart-apb-debug-bridge, 310 apb-peripheral-subsystem, 311 rv32i-microcontroller-soc, 312 axi-lite-dma-engine, 313 image-processing-pipeline, 314 fir-dsp-subsystem, 315 aes128-encryption-core, 316 sha256-hash-core, 317 ethernet-mac-lite, 318 spi-flash-controller, 319 pwm-motor-controller-subsystem, 320 packet-switch-4port, 321 cache-memory-subsystem, 322 traffic-intersection-system, 323 logic-analyzer-capture-engine, 324 vga-frame-buffer-system
+124 traffic-light-with-pedestrian, 125 vending-machine, 126 elevator-controller, 127 combination-lock, 128 washing-machine-controller, 129 parking-lot-counter, 130 four-phase-handshake, 131 gcd-fsmd, 132 safe-fsm-recovery, 133 hierarchical-fsm-microwave, 134 stepper-motor-controller, 135 rom-case, 136 rom-readmemh, 137 synchronous-rom, 138 single-port-ram-async-read, 139 single-port-ram-sync-read, 140 byte-enable-ram, 141 simple-dual-port-ram, 142 true-dual-port-ram, 143 register-file, 144 synchronous-fifo-counter, 145 synchronous-fifo-parameterized, 146 fwft-fifo, 147 asynchronous-fifo, 148 lifo-stack, 149 content-addressable-memory, 150 ping-pong-buffer, 151 sram-controller, 152 memory-bist-march, 153 ecc-memory-secded, 154 button-debouncer, 155 pwm-generator, 156 programmable-timer, 157 watchdog-timer, 158 seven-segment-display-controller, 159 led-pattern-controller, 160 keypad-scanner, 161 stopwatch, 162 digital-clock, 163 frequency-counter, 164 pulse-width-measurement, 165 servo-controller, 166 quadrature-encoder-decoder, 167 ps2-keyboard-receiver, 168 lcd-controller-hd44780, 169 vga-sync-generator, 170 tone-generator, 171 ultrasonic-sensor-interface, 172 sigma-delta-dac, 173 ws2812-led-driver, 174 baud-rate-generator, 175 uart-transmitter, 176 uart-receiver, 177 uart-transceiver-with-fifos, 178 configurable-uart, 179 spi-master, 180 spi-slave, 181 i2c-master, 182 i2c-slave, 183 crc-serial-generator, 184 crc32-parallel, 185 manchester-codec, 186 nrzi-bit-stuffing, 187 lfsr-scrambler, 188 one-wire-master, 189 i2s-transmitter, 190 packet-framer-deframer, 191 8b10b-encoder-decoder, 192 valid-ready-handshake, 193 register-slice-skid-buffer, 194 apb-slave-register-bank, 195 apb-master, 196 apb-interconnect, 197 ahb-lite-slave-sram, 198 ahb-lite-master, 199 ahb-to-apb-bridge, 200 axi4-lite-slave, 201 axi4-lite-master, 202 axi4-stream-fifo, 203 axi4-stream-width-converter, 204 axi4-burst-memory-slave, 205 wishbone-slave, 206 multi-master-bus-arbiter, 207 apb-gpio-peripheral, 208 axi-lite-to-apb-bridge, 209 register-block-field-types, 210 parameterized-delay-line, 211 pipelined-adder, 212 pipelined-multiplier, 213 shift-add-multiplier, 214 booth-multiplier-sequential, 215 restoring-divider, 216 non-restoring-divider, 217 integer-square-root, 218 mac-unit, 219 fir-filter, 220 moving-average-filter, 221 cic-decimator, 222 cordic-sin-cos, 223 dds-nco, 224 fixed-priority-arbiter, 225 round-robin-arbiter, 226 two-flop-synchronizer, 227 pulse-synchronizer, 228 handshake-cdc-synchronizer, 229 reset-synchronizer, 230 clock-gating-cell, 231 credit-flow-control, 232 bitonic-sorting-network, 233 histogram-engine, 234 systolic-matrix-multiplier, 235 run-length-encoder, 236 program-counter, 237 instruction-memory, 238 data-memory, 239 risc-register-file, 240 risc-v-alu, 241 alu-control, 242 immediate-generator, 243 instruction-decoder, 244 main-control-unit, 245 branch-unit, 246 load-store-unit, 247 pipeline-register-stage, 248 hazard-detection-unit, 249 forwarding-unit, 250 branch-predictor-bht, 251 branch-target-buffer, 252 interrupt-controller, 253 csr-unit, 254 accumulator-cpu-8bit, 255 cpu-8bit-with-stack, 256 risc16-single-cycle, 257 risc16-multi-cycle, 258 rv32i-single-cycle, 259 rv32i-multi-cycle, 260 rv32i-pipelined, 261 rv32i-pipelined-branch-prediction, 262 stack-machine-cpu, 263 rv32i-with-interrupts, 264 rv32im-with-muldiv, 265 direct-mapped-cache, 266 set-associative-cache, 267 dma-controller, 268 multi-channel-dma, 269 sdram-controller, 270 bus-matrix-2x2, 271 packet-parser, 272 packet-fifo-with-drop, 273 crossbar-switch, 274 ternary-cam, 275 performance-counters, 276 token-bucket-shaper, 277 multi-port-memory-arbiter, 278 cdc-apb-bridge, 279 reference-model-testbench, 280 file-driven-testbench, 281 bus-functional-model, 282 random-testing-with-seeds, 283 constrained-random-stimulus, 284 scoreboard-checking, 285 assertion-monitors, 286 functional-coverage, 287 layered-testbench, 288 error-injection-testing, 289 regression-seed-sweep, 290 waveform-debugging, 291 systemverilog-immediate-assertions, 292 exhaustive-equivalence-checking, 293 led-blinker, 294 debounced-counter-display, 295 breathing-led, 296 uart-echo, 297 uart-led-control, 298 vga-test-pattern, 299 vga-bouncing-box, 300 vga-pong, 301 keypad-display, 302 stopwatch-display, 303 frequency-meter-display, 304 bram-inference-templates, 305 dsp-inference-mac, 306 power-on-reset, 307 spi-adc-interface, 308 i2c-temperature-sensor, 309 uart-apb-debug-bridge, 310 apb-peripheral-subsystem, 311 rv32i-microcontroller-soc, 312 axi-lite-dma-engine, 313 image-processing-pipeline, 314 fir-dsp-subsystem, 315 aes128-encryption-core, 316 sha256-hash-core, 317 ethernet-mac-lite, 318 spi-flash-controller, 319 pwm-motor-controller-subsystem, 320 packet-switch-4port, 321 cache-memory-subsystem, 322 traffic-intersection-system, 323 logic-analyzer-capture-engine, 324 vga-frame-buffer-system
 <!-- REGRESSION:END -->
 
 ## Project decisions

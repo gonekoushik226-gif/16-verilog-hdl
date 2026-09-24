@@ -838,5 +838,26 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "07-finite-state-machines/121-divisible-by-three-fsm": {
+  "cells": 10,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/122-serial-adder-fsm": {
+  "cells": 9,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "07-finite-state-machines/123-traffic-light-controller": {
+  "cells": 53,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
