@@ -586,5 +586,68 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "05-sequential-logic/085-sr-latch": {
+  "cells": null,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "N/A",
+  "testbenches": 1
+ },
+ "05-sequential-logic/086-d-latch": {
+  "cells": 1,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/087-d-flip-flop": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/088-d-flip-flop-reset-variants": {
+  "cells": 3,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/089-d-flip-flop-with-enable": {
+  "cells": 1,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/090-jk-flip-flop": {
+  "cells": 8,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/091-t-flip-flop": {
+  "cells": 2,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/092-sr-flip-flop": {
+  "cells": 4,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "05-sequential-logic/093-master-slave-d-flip-flop": {
+  "cells": 3,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
