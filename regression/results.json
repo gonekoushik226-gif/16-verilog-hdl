@@ -425,5 +425,54 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "04-arithmetic-circuits/062-half-adder": {
+  "cells": 2,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/063-full-adder": {
+  "cells": 5,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/064-ripple-carry-adder-4bit": {
+  "cells": 28,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/065-ripple-carry-adder-parameterized": {
+  "cells": 28,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/066-half-subtractor": {
+  "cells": 2,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/067-full-subtractor": {
+  "cells": 5,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "04-arithmetic-circuits/068-adder-subtractor": {
+  "cells": 36,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
