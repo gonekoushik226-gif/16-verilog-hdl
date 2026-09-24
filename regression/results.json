@@ -789,5 +789,33 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "06-registers-and-counters/114-clock-divider-even": {
+  "cells": 4,
+  "lint": "WARN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/115-clock-divider-odd": {
+  "cells": 16,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/116-tick-generator": {
+  "cells": 17,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "06-registers-and-counters/117-programmable-prescaler": {
+  "cells": 49,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
