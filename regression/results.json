@@ -236,5 +236,19 @@
   "sim": "PASS",
   "synth": "PASS",
   "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/035-parameterized-mux": {
+  "cells": 24,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
+ },
+ "02-multiplexers-encoders-decoders/036-demux-1to4": {
+  "cells": 8,
+  "lint": "CLEAN",
+  "sim": "PASS",
+  "synth": "PASS",
+  "testbenches": 1
  }
 }
